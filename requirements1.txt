@@ -1,0 +1,4 @@
+python-docx
+textgrid
+cn2an
+pandas

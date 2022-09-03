@@ -1,0 +1,56 @@
+name: multimodal_context
+
+train_data_path: /ceph/home/yangsc21/Python/AIWIN/data/trn/lmdb/lmdb_train
+val_data_path: /ceph/home/yangsc21/Python/AIWIN/data/val/lmdb/lmdb_test
+# test_data_path: data/ted_dataset/lmdb_test
+wordembed_dim: 768
+model_save_path: /ceph/home/yangsc21/Python/AIWIN/result/output_myfastdtw_batchfist_interpolate_normalize_dropout_data_decoder_val3_5_4_onehot_fix/train_multimodal_context
+
+random_seed: -1
+
+# model params
+model: multimodal_context
+
+# 37 blendshapes
+#data_mean: [0.08955, 0.00267, 0.01025, 0.19485, 0.10134, 0.13555, 0.08432, 0.00062, 0.01060, 0.18937, 0.18796, 0.00675, 0.00662, 0.06775, 0.06981, 0.16776, 0.16420, 0.06473, 0.04690, 0.04519, 0.19828, 0.04148, 0.04106, 0.32795, 0.33076, 0.04912, 0.04663, 0.14626, 0.14634, 0.09992, 0.00059, 0.00059, 0.01464, 0.12907, 0.12778, 0.07847, 0.07986]
+#data_std: [0.04649, 0.00609, 0.01141, 0.10415, 0.08468, 0.09739, 0.08599, 0.00703, 0.01046, 0.16268, 0.16235, 0.02286, 0.02371, 0.02407, 0.02478, 0.06164, 0.06055, 0.03565, 0.03619, 0.02832, 0.08721, 0.01704, 0.01707, 0.19814, 0.19839, 0.03011, 0.02853, 0.05981, 0.05981, 0.04353, 0.00784, 0.00783, 0.00585, 0.03877, 0.03865, 0.01884, 0.01947]
+
+# fix, remove B19-B24 in training set
+data_mean: [0.09067, 0.00270, 0.01037, 0.19731, 0.10261, 0.13724, 0.08537, 0.00063, 0.01073, 0.19174, 0.19030, 0.00683, 0.00670, 0.06860, 0.07068, 0.16985, 0.16624, 0.06554, 0.04749, 0.04576, 0.20077, 0.04201, 0.04158, 0.33205, 0.33490, 0.04974, 0.04722, 0.14810, 0.14819, 0.10117, 0.00060, 0.00060, 0.01482, 0.13068, 0.12937, 0.07946, 0.08086]
+data_std: [0.04568, 0.00612, 0.01142, 0.10246, 0.08443, 0.09677, 0.08598, 0.00707, 0.01046, 0.16231, 0.16200, 0.02297, 0.02382, 0.02298, 0.02366, 0.05906, 0.05805, 0.03513, 0.03603, 0.02804, 0.08486, 0.01650, 0.01654, 0.19593, 0.19612, 0.02979, 0.02823, 0.05789, 0.05788, 0.04234, 0.00789, 0.00789, 0.00565, 0.03619, 0.03612, 0.01676, 0.01739]
+
+n_layers: 3
+hidden_size: 128
+z_type: none # speaker, random, none
+input_context: audio # both, audio, text, none
+
+# train params
+epochs: 400
+learning_rate: 0.0001
+loss_regression_weight: 100
+loss_gan_weight: 5.0
+loss_kld_weight: 0.1
+loss_reg_weight: 0.05
+
+# dataset params
+motion_resampling_framerate: 25
+n_poses: 55
+n_pre_poses: 0
+subdivision_stride: 10
+loader_workers: 4
+
+loss_warmup: 601
+batch_size: 2   # 128 for training, 2 for debug
+no_cuda: 01
+dim_video: 37
+pose_dim: 36
+use_emo: False
+use_txt_emo: False
+use_audio_emo: False
+use_hubert: True
+use_MISA: False
+use_diff: False
+use_cmd_sim: False
+
+use_faceformer: False
+use_myWav2Vec2Model: False

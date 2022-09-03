@@ -1,0 +1,3 @@
+a8.wav
+a8_Anim.csv
+...
