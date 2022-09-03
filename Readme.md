@@ -142,6 +142,8 @@ Average time to process 1s audio: 0.025s
 
 ## 5. Visualization
 
+Download `.fbx` model (e.g. by iphone) and you can use `blender.py` based on blender to visualize the blendshape file `.csv` like this:
+
 https://user-images.githubusercontent.com/37477030/188285980-f06761c6-7ac9-4530-849e-3ed6e98b980a.mp4
 
 ## 6. Conclusion
