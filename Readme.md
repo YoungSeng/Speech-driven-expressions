@@ -1,6 +1,6 @@
-# HelloWorld
+# Speech-Driven Expression Blendshape Based on Single-Layer Self-attention Network
 
-### 9th (Third Prize)
+### HelloWorld: 9th (Third Prize)
 
 <div align=center>
 <img src="Model.png" width="500px">
@@ -140,11 +140,11 @@ Average time to process 1s audio: 0.025s
 <img src="Result2.png" width="800px">
 </div>
 
-## 5.More
+## 5.Conclusion
 
 <div align=center>
 <img src="20220904-Final.png" width="600px">
 </div>
 
-As you can see, our model is fairly simple, and just analyzing the data and processing it can be a very significant improvement to the results.
+As you can see, our model is fairly simple, and just **analyzing the data** and processing it can be a very significant improvement to the results.
 Please feel free to contact me (yangsc21@mails.tsinghua.edu.cn) with any question or concerns.
