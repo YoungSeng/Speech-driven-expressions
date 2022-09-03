@@ -140,7 +140,11 @@ Average time to process 1s audio: 0.025s
 <img src="Result2.png" width="800px">
 </div>
 
-## 5.Conclusion
+## 5. Visualization
+
+https://user-images.githubusercontent.com/37477030/188285980-f06761c6-7ac9-4530-849e-3ed6e98b980a.mp4
+
+## 6. Conclusion
 
 <div align=center>
 <img src="20220904-Final.png" width="600px">
