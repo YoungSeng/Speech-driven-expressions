@@ -1,8 +1,23 @@
-# AIWIN
+# HelloWorld
+
+### 9th (Third Prize)
+
+<div align=center>
+<img src="Model.png" width="500px">
+</div>
+
+For more contest details, please refer to [official website](http://www.aiwin.org.cn/competitions/69).
 
 ## 1. Data Process
 
-The data provided here is for debugging. Not complete data.
+The data provided here is Not complete data. 
+Due to copyright issues, please request the dataset on the [official website](http://www.aiwin.org.cn/competitions/69).
+
+Distribution of speech frame lengths:
+
+<div align=center>
+<img src="Distribution of speech frame lengths.png" width="700px">
+</div>
 
 Run
 
@@ -13,10 +28,15 @@ conda config --add channels conda-forge
 conda install montreal-forced-aligner
 mfa models download acoustic mandarin_mfa
 mfa model download dictionary mandarin_mfa
-mfa model inspect acoustic mandarin_mfa      # 查看声学模型情况
+mfa model inspect acoustic mandarin_mfa      # View the acoustic model
 ```
 
 Then
+
+<div align=center>
+<img src="process.png" width="700px">
+</div>
+
 
 ```
 pip install -r requirement1.txt
@@ -76,6 +96,10 @@ And put it to `<your_home_dir>/chinese-hubert-large`
 
 ### 2.4 Train
 
+<div align=center>
+<img src="Parameters.png" width="600px">
+</div>
+
 ```
 cd Tri/scripts
 python train.py --config=<..your path/Tri/config/multimodal_context.yml>
@@ -97,5 +121,30 @@ Run `postprocess_3.py` to deflate the output.
 
 Run `postprocess_2.py` to perform a weighted average of the results from multiple models.
 
-Run `add_eye` to select suitable eye expressions from the training and validation sets to add.
+Run `add_eye` to select suitable eye expressions from the training and validation sets to add. 
+Methodology for adding: Find the closest csv file with frame number greater than or equal to the generated Blendshape in the training and validation sets, and intercept the eye action with the generated Blendshape frame number as the added eye action.
+Frame count in the training and validation sets:
+<div align=center>
+<img src="Frame count in the training and validation sets.png" width="350px">
+</div>
 
+## 4. Model performance
+
+<div align=center>
+<img src="Result.png" width="600px">
+</div>
+
+Average time to process 1s audio: 0.025s
+
+<div align=center>
+<img src="Result2.png" width="800px">
+</div>
+
+## 5.More
+
+<div align=center>
+<img src="20220904-Final.png" width="600px">
+</div>
+
+As you can see, our model is fairly simple, and just analyzing the data and processing it can be a very significant improvement to the results.
+Please feel free to contact me (yangsc21@mails.tsinghua.edu.cn) with any question or concerns.
