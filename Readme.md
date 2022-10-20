@@ -1,6 +1,6 @@
 # Speech-Driven Expression Blendshape Based on Single-Layer Self-attention Network
 
-### HelloWorld: 9th (Third Prize)
+### HelloWorld: 9th
 
 <div align=center>
 <img src="Model.png" width="500px">
