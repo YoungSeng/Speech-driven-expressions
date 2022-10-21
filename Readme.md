@@ -156,3 +156,7 @@ The final video rendering (like [申䒕雅](https://www.bilibili.com/video/BV1w4
 
 As you can see, our model is fairly simple, and just **analyzing the data** and processing it can be a very significant improvement to the results.
 Please feel free to contact me (yangsc21@mails.tsinghua.edu.cn) with any question or concerns.
+
+## 7. [new!] pretrained model
+please see `./result/`
+
