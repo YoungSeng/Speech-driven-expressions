@@ -6,6 +6,10 @@
 <img src="Model.png" width="500px">
 </div>
 
+Our final results are as follows.
+
+https://user-images.githubusercontent.com/37477030/197156927-8546fcb7-c1eb-4526-a918-ad4a7819a030.mp4
+
 For more contest details, please refer to [official website](http://www.aiwin.org.cn/competitions/69).
 
 ## 1. Data Process
@@ -157,6 +161,6 @@ The final video rendering (like [申䒕雅](https://www.bilibili.com/video/BV1w4
 As you can see, our model is fairly simple, and just **analyzing the data** and processing it can be a very significant improvement to the results.
 Please feel free to contact me (yangsc21@mails.tsinghua.edu.cn) with any question or concerns.
 
-## 7. [new!] pretrained model
+## 7. [new!] Pretrained model
 please see `./result/`
 
